@@ -127,3 +127,12 @@ def main():
     updater = Updater("7170539393:AAEI_oC4emB6UiKSSWSihAdqhPZaF6l3ZdU", use_context=True)
     dp = updater.dispatcher
 
+
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
