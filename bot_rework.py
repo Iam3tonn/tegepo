@@ -83,7 +83,7 @@ def send_to_chatgpt(update: Update, context: CallbackContext):
 
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4o",
+            model="gpt-4",
             temperature=0.20,
             messages=[
                 {"role": "system", "content": "Your role is seasoned Copywriter with 15+ years of experience."},
